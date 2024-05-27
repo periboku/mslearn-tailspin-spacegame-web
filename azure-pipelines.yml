@@ -59,7 +59,7 @@ steps:
   displayName: 'Publish Nuget Package'
   inputs:
     command: push
-    feedPublish: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
+    feedPublish: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models.test'
     allowPackageConflicts: true
   condition: succeeded()
 
@@ -76,3 +76,5 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+
+  #test
